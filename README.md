@@ -34,6 +34,6 @@ Asset source and generation prompts: [ASSETS.md](ASSETS.md).
 
 ## Previous website
 
-The previous static site and its configuration are preserved under `docs/previous-site/`. Existing artwork assets are retained. The Cloudflare Worker name remains `atherious-labs-website`.
+The previous static site and its configuration are preserved under `docs/previous-site/`. Existing artwork assets are retained. The connected Cloudflare Worker name is `atherious-labs`.
 
 The `npm run deploy` shortcut builds the OpenNext app before deploying. For connected Cloudflare builds, use `npm run cf:build` as the build command.
