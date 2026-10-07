@@ -35,7 +35,7 @@ const products = [
     subtitle: "Intelligent Production Operating System",
     description:
       "An AI-driven operating system for modern production and manufacturing.",
-    href: "#revector",
+    href: "#contact",
   },
   {
     name: "SunShot AI",
@@ -79,14 +79,7 @@ const capabilities = [
 function Brand() {
   return (
     <a className="brand" href="#top" aria-label="Atherious Labs home">
-      <svg viewBox="0 0 30 36" aria-hidden="true">
-        <path
-          d="M3 31 14 4l12 25-13-8-10 10Z"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-        />
-      </svg>
+      <span className="brand-mark"><img src="/assets/atherious-orbit-logo.png" alt="" /></span>
       <span>ATHERIOUS LABS</span>
     </a>
   );
@@ -242,7 +235,7 @@ export default function Home() {
           </a>
         </header>
         <div className="container hero-content">
-          <span className="kicker">Atherious Labs</span>
+          <div className="hero-eyebrow"><span className="kicker">Atherious Labs</span><span className="since-badge">Since 2025</span></div>
           <h1 id="hero-title">
             Engineering
             <br />
@@ -304,28 +297,25 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <article className="revector" id="revector">
-            <img src="/assets/production.webp" alt="" loading="lazy" />
-            <div className="revector-copy">
-              <span className="kicker">Inside JerseyOS</span>
-              <h3>ReVector AI</h3>
+          <article className="lexwork" id="lexwork">
+            <img src="/assets/lexwork.webp" alt="" loading="lazy" />
+            <div className="lexwork-copy">
+              <span className="kicker">Next from Atherious Labs · Upcoming</span>
+              <h3>LexWork</h3>
               <p>
-                A core AI engine inside JerseyOS, enabling intelligent
-                production workflows.
+                An upcoming intelligent legal workspace, bringing research,
+                documents and everyday legal work into one considered experience.
               </p>
               <a className="text-link" href="#contact">
-                Learn More
+                Enquire About LexWork
                 <ArrowRight size={16} />
               </a>
             </div>
-            <div className="revector-panel">
-              <h4>ReVector AI</h4>
+            <div className="lexwork-panel">
+              <span className="launch-label">Upcoming</span>
+              <h4>Legal work, thoughtfully connected.</h4>
               <p>
-                Production Intelligence
-                <br />
-                Flow Optimization
-                <br />
-                Predictive Systems
+                Research · Documents · Workflow
               </p>
               <CircuitBoard size={22} />
             </div>
@@ -385,15 +375,16 @@ export default function Home() {
               through technology.
             </p>
             <Socials />
+            <a className="text-link founder-profile" href="https://www.linkedin.com/in/nafiul-al-nahid" target="_blank" rel="noreferrer">Connect with Nahid on LinkedIn <ArrowRight size={15} /></a>
           </div>
           <div className="founder-art">
             <img
-              src="/assets/founder.webp"
-              alt="Illustrative founder portrait inspired by the approved design"
+              src="/assets/nahid-alom.png"
+              alt="Nahid Alom, founder of Atherious Labs"
               loading="lazy"
             />
             <div className="signature">
-              The Artist<span>Nahid Alom</span>
+              Nahid Alom<span>Founder & Director</span>
             </div>
           </div>
         </div>
@@ -520,7 +511,7 @@ export default function Home() {
             <a href="https://lexglobalbd.live/">LexGlobal BD</a>
             <a href="#projects">JerseyOS</a>
             <a href="#projects">SunShot AI</a>
-            <a href="#revector">ReVector AI</a>
+            <a href="#lexwork">LexWork</a>
           </div>
           <div>
             <h4>Company</h4>

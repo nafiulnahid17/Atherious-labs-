@@ -6,11 +6,11 @@ Images were created individually with the built-in image-generation tool, using 
 | --------------------------------------------------- | ---------------------------------------------------------------------------- |
 | `public/assets/hero.webp`                           | Hero: monumental metallic A, blue orbit, dark navy alien landscape           |
 | `public/assets/legal.webp`                          | LexGlobal BD: emerald justice scales and network nodes                       |
-| `public/assets/production.webp`                     | JerseyOS card and ReVector banner: blue robotic factory                      |
+| `public/assets/production.webp`                     | JerseyOS card: blue robotic factory                      |
 | `public/assets/sunshot.webp`                        | SunShot AI: golden planet sunrise                                            |
 | `public/assets/moon.webp`                           | About: lunar landscape                                                       |
-| `public/assets/founder.webp`                        | Founder: illustrative portrait based on the design                           |
-| `public/assets/orbit-logo.png`                      | Original uploaded orbit logo, retained byte-for-byte; browser and Apple icon |
+| `public/assets/founder.webp`                        | Archived founder illustration; replaced by supplied portrait                           |
+| `public/assets/orbit-logo.png`                      | Original uploaded orbit logo, retained byte-for-byte; archived asset |
 | `public/assets/board-1.webp` through `board-4.webp` | Four anonymous illustrative board portraits                                  |
 | `public/assets/team-1.webp` through `team-4.webp`   | Four anonymous illustrative team portraits                                   |
 
@@ -26,3 +26,10 @@ All generated images requested premium realistic cinematic artwork with no text,
 6. **Founder:** Illustrative editorial portrait inspired by the male portrait in the supplied mockup: South Asian young adult, black turtleneck and tailored dark blazer, profile facing right, warm vertical office lights, dark negative space and realistic restrained lighting. Not a verified portrait of the founder.
 
 7–14. **Supporting portraits:** Each generated individually as a square corporate portrait with one South Asian adult, natural skin, centered chest-up framing, face in upper half, subtle warm office window light and blurred charcoal/beige background. The subjects vary in gender, age, hair, glasses and clothing to match the reference layout. Board subjects use dark business attire; team subjects use navy or charcoal casual professional attire. All are explicitly anonymous illustrative portraits with no text, names, logos or watermarks; appointments remain unannounced.
+
+## Updated assets
+
+- `public/assets/atherious-orbit-logo.png`: new supplied orbit logo, unchanged bytes. Displayed in header/footer and used as site icon. CSS frames the orbit mark alongside editable brand text.
+- `public/assets/nahid-alom.png`: supplied Nahid Alom portrait, unchanged bytes; displayed in the founder section.
+- `public/assets/lexwork.webp`: individually generated premium legal-workspace banner, optimized from the original PNG. Prompt: wide midnight navy office, glass document layers, subtle legal scales, gold desk light and cyan highlights, dark left area for HTML text, no people, readable text or logos.
+- Founder LinkedIn: https://www.linkedin.com/in/nafiul-al-nahid — profile name and LexGlobal BD activity matched. Facebook page URL has not been verified; no guessed link is published.

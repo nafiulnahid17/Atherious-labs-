@@ -319,7 +319,7 @@ h2 {
   right: 28px;
 }
 .product-copy h3,
-.revector h3 {
+.lexwork h3 {
   font-size: 28px;
   line-height: 1.1;
   margin: 0 0 9px;
@@ -337,7 +337,7 @@ h2 {
   max-width: 300px;
   margin: 0 0 20px;
 }
-.revector {
+.lexwork {
   position: relative;
   border: 1px solid #31617f;
   border-radius: 17px;
@@ -351,7 +351,7 @@ h2 {
   isolation: isolate;
   background: #07131f;
 }
-.revector > img {
+.lexwork > img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -360,7 +360,7 @@ h2 {
   object-position: 50% 45%;
   z-index: -2;
 }
-.revector:after {
+.lexwork:after {
   content: "";
   position: absolute;
   inset: 0;
@@ -372,22 +372,22 @@ h2 {
   );
   z-index: -1;
 }
-.revector-copy {
+.lexwork-copy {
   max-width: 370px;
 }
-.revector .kicker {
+.lexwork .kicker {
   color: #9caec1;
   font-size: 10px;
   letter-spacing: 3px;
   margin-bottom: 12px;
 }
-.revector p {
+.lexwork p {
   font-size: 14px;
   color: #a4b5c3;
   line-height: 1.6;
   margin: 0 0 15px;
 }
-.revector-panel {
+.lexwork-panel {
   width: 310px;
   background: rgba(2, 12, 19, 0.88);
   border: 1px solid #22648a;
@@ -395,15 +395,15 @@ h2 {
   padding: 22px;
   color: #7bb9d8;
 }
-.revector-panel h4 {
+.lexwork-panel h4 {
   margin: 0 0 5px;
 }
-.revector-panel p {
+.lexwork-panel p {
   color: #376b8a;
   font-size: 12px;
   letter-spacing: 1px;
 }
-.revector-panel svg {
+.lexwork-panel svg {
   display: block;
   margin-left: auto;
 }
@@ -944,19 +944,19 @@ footer {
   .product-copy h3 {
     font-size: 30px;
   }
-  .revector {
+  .lexwork {
     padding: 25px;
     min-height: 330px;
     align-items: flex-start;
     flex-direction: column;
     gap: 25px;
   }
-  .revector-panel {
+  .lexwork-panel {
     width: 100%;
     max-width: 310px;
     padding: 15px;
   }
-  .revector-panel p {
+  .lexwork-panel p {
     margin-bottom: 0;
   }
   .about-grid {
@@ -1078,3 +1078,40 @@ footer {
     font-size: clamp(29px, 2.5vw, 38px);
   }
 }
+
+/* Refined surfaces and supplied brand assets. */
+.brand .brand-mark { position: relative; display: block; width: 56px; height: 48px; flex: 0 0 56px; overflow: hidden; margin-right: 8px; }
+.brand-mark img { position: absolute; width: 76px; max-width: none; height: 76px; left: -10px; top: -12px; }
+.header { border-bottom: 1px solid rgba(160, 192, 214, .15); }
+.hero-eyebrow { display: flex; align-items: center; gap: 18px; margin-bottom: 19px; }
+.hero-eyebrow .kicker { margin: 0; }
+.since-badge { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #e8cf9e; border: 1px solid #9d81514d; border-radius: 30px; padding: 7px 12px; background: #e8bc730a; }
+.product-card { box-shadow: 0 16px 40px #0004; transition: transform .25s ease, border-color .25s ease; }
+.product-card:hover { transform: translateY(-5px); border-color: #d8ba78aa; }
+.gold-button { box-shadow: 0 6px 24px #e8bc7320; }
+.lexwork { min-height: 280px; border-color: #a88a515e; box-shadow: 0 18px 45px #0004; }
+.lexwork:after { background: linear-gradient(90deg, #07121bef 5%, #07121b80 55%, #07121b60); }
+.lexwork .kicker { color: #e8cf9e; line-height: 1.7; }
+.lexwork-panel { background: #06121ab8; border-color: #d5b77f4d; backdrop-filter: blur(14px); box-shadow: 0 12px 38px #0004; }
+.launch-label { display: inline-block; color: #e8cf9e; text-transform: uppercase; letter-spacing: 2px; font-size: 10px; margin-bottom: 15px; }
+.lexwork-panel h4 { font-size: 20px; line-height: 1.4; color: #eee7d9; }
+.lexwork-panel p { color: #a6b9c5; line-height: 1.7; margin-top: 12px; }
+.lexwork-panel svg { color: #d8ba78; }
+.founder { background: radial-gradient(ellipse at 70% 50%, #15222b 0%, #040a0f 65%); }
+.founder-grid { padding-top: 35px; padding-bottom: 35px; }
+.founder-art { height: 480px; max-width: 440px; width: 100%; justify-self: end; border: 1px solid #c5ac7755; border-radius: 18px; overflow: hidden; box-shadow: 0 22px 70px #0007; }
+.founder-art > img { width: 100%; object-position: center 32%; }
+.founder-art:after { background: linear-gradient(0deg, #040a0fd9, transparent 40%); }
+.signature { right: 25px; bottom: 22px; font-size: 34px; }
+.founder-profile { margin-top: 18px; font-size: 12px; }
+.capability-grid article { background: #06121c75; border: 1px solid #7499b51c; border-radius: 12px; padding: 20px; }
+@media (max-width: 760px) {
+  .hero-eyebrow { gap: 12px; }
+  .since-badge { font-size: 9px; padding: 6px 9px; }
+  .founder-grid { padding-top: 0; padding-bottom: 30px; }
+  .founder-art { height: 440px; justify-self: center; }
+  .founder-art > img { width: 100%; height: 100%; }
+  .capability-grid article { padding: 14px; }
+  .lexwork-panel { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .product-card { transition: none; } .product-card:hover { transform: none; } }

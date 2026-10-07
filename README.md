@@ -22,10 +22,10 @@ npm run cf:deploy
 ## Content and interactions
 
 - Projects: LexGlobal BD, JerseyOS and SunShot AI.
-- ReVector AI is a tool inside JerseyOS.
+- LexWork is an upcoming intelligent legal workspace.
 - Founder: Nahid Alom, Founder & Director.
 - Board and team profiles remain explicitly unannounced; no fictional identities are presented as members.
-- The founder artwork is an illustrative recreation of the supplied design, not a verified photograph.
+- The logo and Nahid Alom portrait are the supplied PNG files, preserved unchanged. The founder section links to his verified LinkedIn profile. A Facebook URL is pending confirmation.
 - Contact and update requests open an email draft to contact@atheriouslabs.com. They do not claim a server-side submission or subscription.
 - Generated backgrounds contain no typography; site text remains selectable and accessible.
 - Mobile navigation, keyboard focus and reduced-motion preferences are supported.
