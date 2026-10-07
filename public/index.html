@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#050912">
-<meta name="description" content="Atherious Labs is a Bangladesh-born AI and product research lab building intelligent systems, legal technology and production infrastructure.">
+<meta name="theme-color" content="#04070c">
+<meta name="description" content="Atherious Labs — Bangladesh-born AI and product research lab building intelligent systems, legal technology and production infrastructure.">
 <meta property="og:title" content="Atherious Labs — Engineering Intelligent Systems">
 <meta property="og:description" content="Ideas. Intelligence. Infrastructure. A brighter tomorrow.">
 <meta property="og:image" content="/assets/hero-hd.webp">
@@ -14,88 +14,161 @@
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+<div class="noise"></div>
 <div class="scroll-progress"><span id="scrollProgress"></span></div>
 
 <header class="site-header" id="top">
   <div class="container nav-shell">
-    <a href="#top" class="brand" aria-label="Atherious Labs home"><span class="mark">A</span><span>ATHERIOUS LABS</span></a>
-    <button id="menuToggle" class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><i></i><i></i></button>
-    <nav id="mainNav" class="main-nav">
+    <a class="brand" href="#top" aria-label="Atherious Labs">
+      <img src="/assets/logo-white.webp" alt="Atherious Labs">
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
       <a href="#projects">Projects</a><a href="#about">About</a><a href="#founder">Founder</a><a href="#board">Board</a><a href="#team">Team</a><a href="#contact">Contact</a>
     </nav>
-    <a class="btn outline nav-cta" href="#contact">Contact Us ↗</a>
+    <a class="btn ghost nav-cta" href="#contact">Contact Us ↗</a>
   </div>
 </header>
 
 <main>
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="container hero-grid">
+<section class="hero" id="home">
+  <div class="hero-media" aria-hidden="true"></div>
+  <div class="hero-gridlines" aria-hidden="true"></div>
+  <div class="hero-beam beam-a"></div><div class="hero-beam beam-b"></div>
+  <div class="container hero-layout">
     <div class="hero-copy reveal">
       <span class="eyebrow">ATHERIOUS LABS</span>
       <h1>Engineering Intelligent Systems <em>for the Future.</em></h1>
       <p>A Bangladesh-born AI and product research lab building specialized intelligent software and digital infrastructure for a smarter, more connected world.</p>
-      <div class="hero-actions"><a class="btn gold" href="#projects">Explore Our Projects →</a><a class="btn dark" href="#contact">Contact Atherious Labs</a></div>
-      <div class="hero-tags"><span>AI Systems</span><span>Legal Technology</span><span>Production Intelligence</span></div>
+      <div class="hero-actions"><a class="btn primary" href="#projects">Explore Our Projects →</a><a class="btn ghost" href="#contact">Contact Atherious Labs</a></div>
+      <div class="hero-pills"><span>✦ AI Systems</span><span>⌘ Legal Technology</span><span>◈ Production Intelligence</span></div>
     </div>
-    <div class="hero-orbit reveal" aria-hidden="true"><div class="a-core">A</div><i class="r1"></i><i class="r2"></i><i class="r3"></i></div>
+    <div class="hero-stage reveal" id="heroStage">
+      <div class="hero-orbit o1"></div><div class="hero-orbit o2"></div><div class="hero-orbit o3"></div>
+      <div class="hero-core"><img src="/assets/logo-3d.webp" alt="Atherious Labs 3D emblem"></div>
+      <div class="hud hud-a"><b>AI SYSTEMS</b><span>Research · Build · Scale</span></div>
+      <div class="hud hud-b"><b>GLOBAL</b><span>Bangladesh → World</span></div>
+      <div class="hud hud-c"><b>R&D</b><span>Intelligence in motion</span></div>
+    </div>
   </div>
+  <a class="scroll-cue" href="#projects"><span></span>Scroll to discover</a>
 </section>
 
 <section class="section projects" id="projects">
   <div class="container">
-    <div class="section-head reveal"><div><span class="eyebrow">OUR WORK</span><h2>Highlighted Projects</h2></div><p>From legal intelligence to production systems and foundational AI — specialized products engineered for real-world impact.</p></div>
+    <div class="section-head reveal"><div><span class="eyebrow">OUR WORK</span><h2>Highlighted Projects</h2></div><p>Specialized products engineered around legal intelligence, production automation and next-generation AI.</p></div>
     <div class="project-grid">
-      <article class="project-card legal reveal"><div class="card-art"><span class="symbol">⚖</span></div><div class="card-copy"><div class="meta"><span class="status live">LIVE</span><small>LEGAL TECHNOLOGY</small></div><h3>LexGlobal BD</h3><p>AI-powered legal ecosystem designed to make legal information, services and justice support more accessible.</p><a href="https://lexglobalbd.live/" target="_blank" rel="noreferrer">Explore Project ↗</a></div></article>
-      <article class="project-card jersey reveal"><div class="card-art"><span class="symbol">J</span></div><div class="card-copy"><div class="meta"><span class="status dev">IN DEVELOPMENT</span><small>PRODUCTION INTELLIGENCE</small></div><h3>JerseyOS</h3><p>An intelligent production operating system for modern apparel and manufacturing workflows.</p><span class="muted-link">Private internal product</span></div></article>
-      <article class="project-card sun reveal"><div class="card-art"><span class="symbol">S</span></div><div class="card-copy"><div class="meta"><span class="status soon">UPCOMING</span><small>GENERAL AI</small></div><h3>SunShot AI</h3><p>A next-generation AI platform focused on reasoning, research and creation.</p><span class="muted-link">Preview coming soon</span></div></article>
+      <article class="project-card reveal tilt">
+        <div class="project-art legal-art">
+          <div class="art-glow"></div>
+          <svg viewBox="0 0 420 250" role="img" aria-label="LexGlobal legal technology artwork">
+            <defs><linearGradient id="lg" x1="0" x2="1"><stop stop-color="#62ffd2"/><stop offset="1" stop-color="#0fa66f"/></linearGradient></defs>
+            <path d="M210 38 310 76v67c0 43-35 75-100 91-65-16-100-48-100-91V76z" fill="none" stroke="url(#lg)" stroke-width="4"/>
+            <path d="M210 72v108M153 109h114M173 109l-31 52h62zm74 0-31 52h62z" fill="none" stroke="#c8fff0" stroke-width="4" stroke-linejoin="round"/>
+            <circle cx="210" cy="72" r="8" fill="#eafff8"/>
+            <g stroke="#36d9a4" opacity=".55"><path d="M78 58h58m148 0h58M55 195h88m134 0h88"/><circle cx="78" cy="58" r="4" fill="#36d9a4"/><circle cx="342" cy="58" r="4" fill="#36d9a4"/></g>
+          </svg>
+        </div>
+        <div class="project-body"><div class="meta"><span class="status live">LIVE</span><small>LEGAL TECHNOLOGY</small></div><h3>LexGlobal BD</h3><p>AI-powered legal ecosystem making legal information, tools and justice support more accessible.</p><a href="https://lexglobalbd.live/" target="_blank" rel="noreferrer">Explore Project ↗</a></div>
+      </article>
+
+      <article class="project-card reveal tilt">
+        <div class="project-art jersey-art">
+          <div class="art-glow"></div>
+          <svg viewBox="0 0 420 250" role="img" aria-label="JerseyOS production intelligence artwork">
+            <defs><linearGradient id="jg" x1="0" x2="1"><stop stop-color="#83d9ff"/><stop offset="1" stop-color="#2375ff"/></linearGradient></defs>
+            <path d="M137 68 181 42h58l44 26 54 54-38 39-31-25v82H152v-82l-31 25-38-39z" fill="rgba(8,34,57,.55)" stroke="url(#jg)" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M181 42c5 22 15 33 29 33s24-11 29-33M152 136h116M210 76v142" fill="none" stroke="#bdeaff" stroke-width="3" opacity=".8"/>
+            <g fill="#54bfff"><circle cx="137" cy="68" r="5"/><circle cx="283" cy="68" r="5"/><circle cx="152" cy="136" r="5"/><circle cx="268" cy="136" r="5"/><circle cx="210" cy="218" r="5"/></g>
+          </svg>
+        </div>
+        <div class="project-body"><div class="meta"><span class="status dev">IN DEVELOPMENT</span><small>PRODUCTION INTELLIGENCE</small></div><h3>JerseyOS</h3><p>Private intelligent production operating system for modern apparel and manufacturing workflows.</p><span class="muted-link">Private internal product</span></div>
+      </article>
+
+      <article class="project-card reveal tilt">
+        <div class="project-art sun-art">
+          <div class="art-glow"></div>
+          <svg viewBox="0 0 420 250" role="img" aria-label="SunShot AI artwork">
+            <defs><radialGradient id="sg"><stop stop-color="#fff8c2"/><stop offset=".35" stop-color="#ffd75e"/><stop offset="1" stop-color="#ff7a1a"/></radialGradient></defs>
+            <circle cx="210" cy="125" r="48" fill="url(#sg)"/>
+            <ellipse cx="210" cy="125" rx="122" ry="45" fill="none" stroke="#ffc75b" stroke-width="3"/>
+            <ellipse cx="210" cy="125" rx="92" ry="88" fill="none" stroke="#ff9b32" stroke-width="2" transform="rotate(55 210 125)" opacity=".8"/>
+            <circle cx="322" cy="108" r="8" fill="#fff1a8"/><circle cx="122" cy="77" r="5" fill="#ffb746"/>
+          </svg>
+        </div>
+        <div class="project-body"><div class="meta"><span class="status soon">UPCOMING</span><small>GENERAL AI</small></div><h3>SunShot AI</h3><p>A next-generation AI platform centered on reasoning, research and creation.</p><span class="muted-link">Product preview coming soon</span></div>
+      </article>
     </div>
-    <article class="inside-card reveal"><div><span class="eyebrow">INSIDE JERSEYOS</span><h3>ReVector AI</h3><p>A specialized production tool for artwork analysis, reconstruction, vectorization, validation and export.</p></div><div class="vector-glyph"><span>V</span></div><div class="inside-meta"><small>CORE CAPABILITY</small><strong>Production Intelligence</strong><span>Vectorization • Validation • Export</span></div></article>
+
+    <article class="revector reveal">
+      <div class="revector-art">
+        <svg viewBox="0 0 440 240" role="img" aria-label="ReVector AI vector artwork">
+          <defs><linearGradient id="vg" x1="0" x2="1"><stop stop-color="#5ef0ff"/><stop offset="1" stop-color="#8d72ff"/></linearGradient></defs>
+          <path d="M75 180C135 40 232 48 354 83c-74 31-91 86-112 132-31-51-79-72-167-35z" fill="rgba(44,101,140,.18)" stroke="url(#vg)" stroke-width="4"/>
+          <path d="M75 180 174 93l68 122 112-132" fill="none" stroke="#d4f7ff" stroke-width="2" stroke-dasharray="6 8"/>
+          <g fill="#07121c" stroke="#61e9ff" stroke-width="4"><circle cx="75" cy="180" r="9"/><circle cx="174" cy="93" r="9"/><circle cx="242" cy="215" r="9"/><circle cx="354" cy="83" r="9"/></g>
+          <path d="m205 55 28 25-39 42-28-25z" fill="none" stroke="#9a86ff" stroke-width="4"/>
+        </svg>
+      </div>
+      <div><span class="eyebrow">INSIDE JERSEYOS</span><h3>ReVector AI</h3><p>Artwork analysis, reconstruction, vectorization, validation and production export — inside the JerseyOS ecosystem.</p></div>
+      <div class="revector-badge"><small>CORE CAPABILITY</small><strong>Production Intelligence</strong><span>Detect · Vectorize · Validate · Export</span></div>
+    </article>
   </div>
 </section>
 
 <section class="section about" id="about">
-  <div class="container about-grid">
-    <div class="about-copy reveal"><span class="eyebrow">ABOUT ATHERIOUS LABS</span><h2>Building Intelligent Products for a Better Tomorrow.</h2><p>Atherious Labs is a Bangladesh-born AI and product research lab focused on creating specialized intelligent software, digital infrastructure and scalable systems for global impact.</p><a class="btn outline" href="#contact">Connect With Us →</a></div>
+  <div class="about-grid-bg"></div>
+  <div class="container about-layout">
+    <div class="about-copy reveal"><span class="eyebrow">ABOUT ATHERIOUS LABS</span><h2>Building Intelligent Products for a Better Tomorrow.</h2><p>Atherious Labs is a Bangladesh-born AI and product research lab focused on intelligent software, automation and digital infrastructure designed for real-world impact.</p><a class="btn ghost" href="#contact">Connect With Us →</a></div>
     <div class="cap-grid reveal">
-      <article><b>✦</b><h3>AI Systems</h3><p>Research and real-world AI products.</p></article>
-      <article><b>◫</b><h3>Legal Technology</h3><p>Accessible, intelligent legal solutions.</p></article>
-      <article><b>⬡</b><h3>Production Intelligence</h3><p>Smarter manufacturing and operations.</p></article>
-      <article><b>⌁</b><h3>Automation</h3><p>Tools for more efficient workflows.</p></article>
-      <article><b>◉</b><h3>Research</h3><p>Exploring what comes next.</p></article>
-      <article><b>◎</b><h3>Global Impact</h3><p>From Bangladesh to the world.</p></article>
+      <article><svg viewBox="0 0 32 32"><path d="M16 3 20 12l9 4-9 4-4 9-4-9-9-4 9-4z"/></svg><h3>AI Systems</h3><p>Research-driven intelligent products.</p></article>
+      <article><svg viewBox="0 0 32 32"><path d="M16 3v26M8 9h16M9 9 4 19h10zm14 0-5 10h10z"/></svg><h3>Legal Technology</h3><p>Accessible, intelligent legal solutions.</p></article>
+      <article><svg viewBox="0 0 32 32"><path d="m16 3 12 7v12l-12 7-12-7V10zM4 10l12 7 12-7M16 17v12"/></svg><h3>Production Intelligence</h3><p>Smarter production operations.</p></article>
+      <article><svg viewBox="0 0 32 32"><path d="M5 20h7l4-12 4 16 3-8h4"/></svg><h3>Automation</h3><p>Systems that remove repetitive work.</p></article>
+      <article><svg viewBox="0 0 32 32"><circle cx="14" cy="14" r="8"/><path d="m20 20 8 8M10 14h8M14 10v8"/></svg><h3>Research</h3><p>Exploring what comes next.</p></article>
+      <article><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M4 16h24M16 4c5 5 5 19 0 24M16 4c-5 5-5 19 0 24"/></svg><h3>Global Impact</h3><p>Built in Bangladesh for the world.</p></article>
     </div>
   </div>
-  <div class="container quote reveal">“We don't just use AI. We build systems that create real-world impact.”</div>
+  <div class="container quote reveal"><span class="quote-mark">“</span><p>We don't just use AI. We build systems that create real-world impact.</p><span class="quote-line"></span></div>
 </section>
 
 <section class="section founder" id="founder">
-  <div class="container founder-shell reveal">
-    <div class="founder-copy"><span class="eyebrow">FOUNDER</span><h2>MD. NAHID ALOM</h2><h3>FOUNDER &amp; DIRECTOR</h3><p>A Bangladesh-born AI researcher, product builder and technology entrepreneur leading Atherious Labs with a focus on specialized intelligent systems that solve practical problems and can scale beyond borders.</p><div class="founder-links"><a href="mailto:nahid@atheriouslabs.com">@</a><a href="https://www.linkedin.com/in/nafiul-al-nahid" target="_blank" rel="noreferrer">in</a></div></div>
-    <div class="founder-art"><img src="/assets/founder-3d.webp" alt="MD. Nahid Alom — Founder and Director of Atherious Labs"></div>
+  <div class="container founder-card reveal">
+    <div class="founder-copy"><span class="eyebrow">FOUNDER</span><h2>MD. NAHID ALOM</h2><h3>FOUNDER &amp; DIRECTOR</h3><p>AI researcher, product builder and technology entrepreneur leading Atherious Labs with a focus on specialized intelligent systems and global-scale products.</p><div class="founder-links"><a href="mailto:nahid@atheriouslabs.com">@</a><a href="https://www.linkedin.com/in/nafiul-al-nahid" target="_blank" rel="noreferrer">in</a></div></div>
+    <div class="founder-visual"><img src="/assets/founder-3d.webp" alt="Founder artwork for MD. Nahid Alom"><div class="founder-shade"></div><div class="founder-float"><b>THE ARTIST</b><span>Ideas × Intelligence × Impact</span></div></div>
   </div>
 </section>
 
 <section class="section people" id="board">
-  <div class="container"><div class="section-head reveal"><div><span class="eyebrow">BOARD &amp; ADVISORY JURY</span><h2>Guided by Experience.<br>Driven by Impact.</h2></div><p>Board and advisory profiles will appear here as official appointments are published.</p></div>
-  <div class="profile-grid reveal"><article><span>01</span><h3>Board Member</h3><p>Profile to be announced</p></article><article><span>02</span><h3>Advisory Jury</h3><p>Profile to be announced</p></article><article><span>03</span><h3>Board Member</h3><p>Profile to be announced</p></article><article><span>04</span><h3>Advisory Jury</h3><p>Profile to be announced</p></article></div></div>
+  <div class="container"><div class="section-head reveal"><div><span class="eyebrow">BOARD &amp; ADVISORY JURY</span><h2>Guided by Experience.<br>Driven by Impact.</h2></div><p>Official profiles will be published here only after appointments are approved for public display.</p></div>
+  <div class="profile-grid reveal">
+    <article><div class="avatar"><svg viewBox="0 0 64 64"><circle cx="32" cy="23" r="12"/><path d="M10 58c2-16 12-23 22-23s20 7 22 23"/></svg></div><span>01</span><h3>Board Profile</h3><p>To be announced</p></article>
+    <article><div class="avatar"><svg viewBox="0 0 64 64"><circle cx="32" cy="23" r="12"/><path d="M10 58c2-16 12-23 22-23s20 7 22 23"/></svg></div><span>02</span><h3>Board Profile</h3><p>To be announced</p></article>
+    <article><div class="avatar"><svg viewBox="0 0 64 64"><circle cx="32" cy="23" r="12"/><path d="M10 58c2-16 12-23 22-23s20 7 22 23"/></svg></div><span>03</span><h3>Advisory Profile</h3><p>To be announced</p></article>
+    <article><div class="avatar"><svg viewBox="0 0 64 64"><circle cx="32" cy="23" r="12"/><path d="M10 58c2-16 12-23 22-23s20 7 22 23"/></svg></div><span>04</span><h3>Advisory Profile</h3><p>To be announced</p></article>
+  </div></div>
 </section>
 
 <section class="section people team" id="team">
-  <div class="container"><div class="section-head reveal"><div><span class="eyebrow">OUR PEOPLE</span><h2>The People Building Atherious.</h2></div><p>Official employee profiles will be added here as the team directory is published.</p></div>
-  <div class="profile-grid reveal"><article><span>AI</span><h3>Engineering</h3><p>Team profile coming soon</p></article><article><span>UX</span><h3>Product &amp; Design</h3><p>Team profile coming soon</p></article><article><span>R&amp;D</span><h3>Research</h3><p>Team profile coming soon</p></article><article><span>OPS</span><h3>Operations</h3><p>Team profile coming soon</p></article></div></div>
+  <div class="container"><div class="section-head reveal"><div><span class="eyebrow">OUR PEOPLE</span><h2>The People Building Atherious.</h2></div><p>The public team directory is ready for verified employee profiles.</p></div>
+  <div class="profile-grid reveal">
+    <article class="dept"><div class="dept-icon">AI</div><h3>Engineering</h3><p>Systems · Infrastructure · AI</p></article>
+    <article class="dept"><div class="dept-icon">UX</div><h3>Product &amp; Design</h3><p>Product · UI · Experience</p></article>
+    <article class="dept"><div class="dept-icon">R&D</div><h3>Research</h3><p>Models · Evaluation · Applied R&D</p></article>
+    <article class="dept"><div class="dept-icon">OPS</div><h3>Operations</h3><p>Delivery · Partnerships · Growth</p></article>
+  </div></div>
 </section>
 
 <section class="section contact" id="contact">
-  <div class="container contact-grid">
-    <div class="contact-copy reveal"><span class="eyebrow">CONTACT ATHERIOUS LABS</span><h2>Have an idea<br>worth building?</h2><p>Reach out for partnerships, project inquiries, research collaborations or other opportunities.</p><a class="email" href="mailto:contact@atheriouslabs.com">✉ <span><strong>contact@atheriouslabs.com</strong><small>Official company mailbox</small></span></a></div>
-    <form id="contactForm" class="contact-form reveal"><div class="row"><input name="name" placeholder="Your Name" required><input name="email" type="email" placeholder="Your Email" required></div><input name="subject" placeholder="Subject" required><textarea name="message" rows="6" placeholder="Your Message" required></textarea><button class="btn gold" type="submit">Send Message →</button></form>
-    <aside class="contact-aside reveal"><b>◎</b><h3>Let's Create<br>A Smarter Tomorrow.</h3><p>From Bangladesh to the world — we're open to meaningful conversations.</p></aside>
+  <div class="container contact-layout">
+    <div class="contact-copy reveal"><span class="eyebrow">CONTACT ATHERIOUS LABS</span><h2>Have an idea<br>worth building?</h2><p>Reach out for partnerships, product inquiries, research collaboration or business opportunities.</p><a class="email-card" href="mailto:contact@atheriouslabs.com"><span>✉</span><div><b>contact@atheriouslabs.com</b><small>Official company mailbox</small></div></a></div>
+    <form class="contact-form reveal" id="contactForm"><div class="row"><input name="name" placeholder="Your Name" required><input name="email" type="email" placeholder="Your Email" required></div><input name="subject" placeholder="Subject" required><textarea name="message" rows="6" placeholder="Your Message" required></textarea><button class="btn primary" type="submit">Send Message →</button></form>
+    <aside class="contact-globe reveal"><svg viewBox="0 0 180 180"><circle cx="90" cy="90" r="62"/><ellipse cx="90" cy="90" rx="28" ry="62"/><path d="M28 90h124M40 59h100M40 121h100"/></svg><h3>Let's Create<br>A Smarter Tomorrow.</h3><p>From Bangladesh to the world.</p></aside>
   </div>
 </section>
 </main>
 
-<footer><div class="container footer-grid"><div><a class="brand footer-brand" href="#top"><span class="mark">A</span><span>ATHERIOUS LABS</span></a><p>Ideas. Intelligence. Infrastructure.<br>A brighter tomorrow.</p></div><div><h4>Projects</h4><a href="#projects">LexGlobal BD</a><a href="#projects">JerseyOS</a><a href="#projects">SunShot AI</a><a href="#projects">ReVector AI</a></div><div><h4>Company</h4><a href="#about">About</a><a href="#founder">Founder</a><a href="#board">Board &amp; Advisory</a><a href="#team">Our People</a></div><div><h4>Contact</h4><a href="mailto:contact@atheriouslabs.com">Email Us</a><a href="#contact">Business Inquiry</a></div></div><div class="container footer-bottom"><span>© <span id="year"></span> Atherious Labs. All rights reserved.</span><span>Built from Bangladesh for a brighter tomorrow.</span></div></footer>
+<footer><div class="container footer-grid"><div><img src="/assets/logo-white.webp" class="footer-logo" alt="Atherious Labs"><p>Ideas. Intelligence. Infrastructure.<br>A brighter tomorrow.</p></div><div><h4>Projects</h4><a href="#projects">LexGlobal BD</a><a href="#projects">JerseyOS</a><a href="#projects">SunShot AI</a><a href="#projects">ReVector AI</a></div><div><h4>Company</h4><a href="#about">About</a><a href="#founder">Founder</a><a href="#board">Board &amp; Advisory</a><a href="#team">Our People</a></div><div><h4>Contact</h4><a href="mailto:contact@atheriouslabs.com">Company Email</a><a href="mailto:nahid@atheriouslabs.com">Founder Email</a></div></div><div class="container footer-bottom"><span>© <span id="year"></span> Atherious Labs. All rights reserved.</span><span>Built from Bangladesh for a brighter tomorrow.</span></div></footer>
 <script src="/app.js"></script>
 </body>
 </html>
