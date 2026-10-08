@@ -24,7 +24,9 @@ npm run cf:deploy
 - Each homepage project card and footer project link opens a dedicated detail page: `/projects/lexglobal-bd/`, `/projects/jerseyos/`, `/projects/sunshot-ai/`, `/projects/lexwork/`.
 - Detail pages include overview, intended audience, capabilities, workflow and availability. Live LexGlobal BD has an external Visit CTA; projects without a published URL have a project-specific enquiry email CTA.
 - Project content is maintained in `app/data/projects.ts`; add `visitUrl` there when an upcoming project launches.
-- Project routes are statically generated with individual metadata/canonical URLs. Unknown project slugs return 404.
+- Four explicit project routes share `app/components/ProjectDetail.tsx`, with individual metadata/canonical URLs. Unknown project paths return 404. Links use ordinary page navigation for reliable direct loads and refreshes on Workers.
+- OpenNext serves prerendered pages through the static-assets incremental cache with cache interception. Cloudflare build scripts remove only `.next` and `.open-next` output before building to avoid stale deployment artifacts.
+- Infrastructure section: three server/storage cards and eight reusable processing-engine component cards, with stacks, roles and outputs. Hardware allocations, live-health indicators and independent engine deployments are not claimed.
 - LexWork is an upcoming intelligent legal workspace.
 - Founder: Nahid Alom, Founder & Director.
 - Board and team profiles remain explicitly unannounced; no fictional identities are presented as members.

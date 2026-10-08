@@ -27,3 +27,14 @@ Visual previews: [Desktop](desktop-preview.jpg) · [Mobile](mobile-preview.jpg).
 - Homepage navigation, image loading, internal anchors and contact-draft flow rechecked.
 
 Project previews: [Desktop](project-preview.jpg) · [Mobile](project-mobile-preview.jpg).
+
+## Cloudflare route repair and infrastructure
+
+- Reproduced HTTP 404 on the deployed project route before repair.
+- Clean Cloudflare production build passed for four explicit project pages, with static-assets incremental cache and interception configured.
+- Tested the actual Worker using local Wrangler/workerd: all four routes opened from cards and returned HTTP 200 after refresh at 320, 390, 768, 1100 and 1440 pixels.
+- Verified visit/enquiry CTA destinations, canonical metadata, related links, back navigation and HTTP 404 for unknown paths in the Worker runtime.
+- Confirmed exactly three server/storage cards and eight engine-component cards; no browser JavaScript errors or horizontal overflow at any tested width.
+- Rechecked homepage image loading, mobile navigation, internal anchors and contact email-draft flow.
+
+Infrastructure previews: [Desktop](infrastructure-preview.jpg) · [Mobile](infrastructure-mobile-preview.jpg).

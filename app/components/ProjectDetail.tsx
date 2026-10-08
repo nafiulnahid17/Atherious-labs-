@@ -1,38 +1,16 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
-import { getProject, projectDetails } from "../../data/projects";
+import { projectDetails, type Project } from "../data/projects";
 
-type Props = { params: Promise<{ slug: string }> };
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return projectDetails.map(({ slug }) => ({ slug }));
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const project = getProject((await params).slug);
-  if (!project) return {};
-  return {
-    title: `${project.name} — Atherious Labs`,
-    description: project.intro,
-    alternates: { canonical: `/projects/${project.slug}/` },
-  };
-}
-
-export default async function ProjectPage({ params }: Props) {
-  const project = getProject((await params).slug);
-  if (!project) notFound();
+export default function ProjectDetail({ project }: { project: Project }) {
   const enquiry = `mailto:contact@atheriouslabs.com?subject=${encodeURIComponent(`${project.name} enquiry`)}`;
   return (
     <main className="project-detail">
       <header className="detail-header container">
-        <Link className="brand" href="/" aria-label="Atherious Labs home">
+        <a className="brand" href="/" aria-label="Atherious Labs home">
           <span className="brand-mark"><img src="/assets/atherious-orbit-logo.png" alt="" /></span>
           <span>ATHERIOUS LABS</span>
-        </Link>
-        <Link className="text-link" href="/#projects"><ArrowLeft size={16} /> All Projects</Link>
+        </a>
+        <a className="text-link" href="/#projects"><ArrowLeft size={16} /> All Projects</a>
       </header>
       <section className="detail-hero" aria-labelledby="project-title">
         <img className="detail-hero-art" src={`/assets/${project.image}`} alt="" fetchPriority="high" />
@@ -92,9 +70,9 @@ export default async function ProjectPage({ params }: Props) {
       </section>
       <nav className="container detail-related" aria-label="Other projects">
         <span className="kicker">Explore more projects</span>
-        <div>{projectDetails.filter((item) => item.slug !== project.slug).map((item) => <Link href={`/projects/${item.slug}/`} key={item.slug}>{item.name}<ArrowRight size={16} /></Link>)}</div>
+        <div>{projectDetails.filter((item) => item.slug !== project.slug).map((item) => <a href={`/projects/${item.slug}/`} key={item.slug}>{item.name}<ArrowRight size={16} /></a>)}</div>
       </nav>
-      <footer className="container detail-footer"><Link href="/">Atherious Labs · Since 2025</Link><a href="mailto:contact@atheriouslabs.com">contact@atheriouslabs.com</a></footer>
+      <footer className="container detail-footer"><a href="/">Atherious Labs · Since 2025</a><a href="mailto:contact@atheriouslabs.com">contact@atheriouslabs.com</a></footer>
     </main>
   );
 }

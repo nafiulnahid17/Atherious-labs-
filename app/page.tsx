@@ -15,7 +15,7 @@ import {
   X,
 } from "lucide-react";
 import { useState, type FormEvent } from "react";
-import Link from "next/link";
+import Infrastructure from "./components/Infrastructure";
 
 const products = [
   {
@@ -279,7 +279,7 @@ export default function Home() {
           />
           <div className="product-grid" id="project-cards">
             {products.map((product) => (
-              <Link
+              <a
                 className={`product-card ${product.className}`}
                 key={product.name}
                 href={product.href}
@@ -297,10 +297,10 @@ export default function Home() {
                     <ArrowRight size={16} />
                   </span>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
-          <Link className="lexwork" id="lexwork" href="/projects/lexwork/" aria-label="View LexWork project details">
+          <a className="lexwork" id="lexwork" href="/projects/lexwork/" aria-label="View LexWork project details">
             <img src="/assets/lexwork.webp" alt="" loading="lazy" />
             <div className="lexwork-copy">
               <span className="kicker">Next from Atherious Labs · Upcoming</span>
@@ -322,9 +322,10 @@ export default function Home() {
               </p>
               <CircuitBoard size={22} />
             </div>
-          </Link>
+          </a>
         </div>
       </section>
+      <Infrastructure />
       <section id="about" className="about section">
         <img
           className="section-background"
@@ -511,14 +512,16 @@ export default function Home() {
           </div>
           <div>
             <h4>Projects</h4>
-            <Link href="/projects/lexglobal-bd/">LexGlobal BD</Link>
-            <Link href="/projects/jerseyos/">JerseyOS</Link>
-            <Link href="/projects/sunshot-ai/">SunShot AI</Link>
-            <Link href="/projects/lexwork/">LexWork</Link>
+            <a href="/projects/lexglobal-bd/">LexGlobal BD</a>
+            <a href="/projects/jerseyos/">JerseyOS</a>
+            <a href="/projects/sunshot-ai/">SunShot AI</a>
+            <a href="/projects/lexwork/">LexWork</a>
           </div>
           <div>
             <h4>Company</h4>
             <a href="#about">About</a>
+            <a href="#infrastructure">Our Servers</a>
+            <a href="#engines">Core Engines</a>
             <a href="#founder">Founder</a>
             <a href="#board">Board & Advisory</a>
             <a href="#team">Our People</a>
