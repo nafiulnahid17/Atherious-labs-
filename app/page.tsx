@@ -15,6 +15,7 @@ import {
   X,
 } from "lucide-react";
 import { useState, type FormEvent } from "react";
+import Link from "next/link";
 
 const products = [
   {
@@ -25,7 +26,7 @@ const products = [
     subtitle: "AI-Powered Legal Ecosystem",
     description:
       "Making legal information, services and justice more accessible through AI.",
-    href: "https://lexglobalbd.live/",
+    href: "/projects/lexglobal-bd/",
   },
   {
     name: "JerseyOS",
@@ -35,7 +36,7 @@ const products = [
     subtitle: "Intelligent Production Operating System",
     description:
       "An AI-driven operating system for modern production and manufacturing.",
-    href: "#contact",
+    href: "/projects/jerseyos/",
   },
   {
     name: "SunShot AI",
@@ -45,7 +46,7 @@ const products = [
     subtitle: "General-Purpose AI Platform",
     description:
       "A next-generation AI platform for individuals, businesses and beyond.",
-    href: "#contact",
+    href: "/projects/sunshot-ai/",
   },
 ];
 const capabilities = [
@@ -278,9 +279,11 @@ export default function Home() {
           />
           <div className="product-grid" id="project-cards">
             {products.map((product) => (
-              <article
+              <Link
                 className={`product-card ${product.className}`}
                 key={product.name}
+                href={product.href}
+                aria-label={`View ${product.name} project details`}
               >
                 <img src={`/assets/${product.image}`} alt="" loading="lazy" />
                 <div className="product-shade" />
@@ -289,15 +292,15 @@ export default function Home() {
                   <h3>{product.name}</h3>
                   <h4>{product.subtitle}</h4>
                   <p>{product.description}</p>
-                  <a className="text-link" href={product.href}>
-                    Explore Project
+                  <span className="text-link">
+                    View Project Details
                     <ArrowRight size={16} />
-                  </a>
+                  </span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
-          <article className="lexwork" id="lexwork">
+          <Link className="lexwork" id="lexwork" href="/projects/lexwork/" aria-label="View LexWork project details">
             <img src="/assets/lexwork.webp" alt="" loading="lazy" />
             <div className="lexwork-copy">
               <span className="kicker">Next from Atherious Labs · Upcoming</span>
@@ -306,10 +309,10 @@ export default function Home() {
                 An upcoming intelligent legal workspace, bringing research,
                 documents and everyday legal work into one considered experience.
               </p>
-              <a className="text-link" href="#contact">
-                Enquire About LexWork
+              <span className="text-link">
+                View Project Details
                 <ArrowRight size={16} />
-              </a>
+              </span>
             </div>
             <div className="lexwork-panel">
               <span className="launch-label">Upcoming</span>
@@ -319,7 +322,7 @@ export default function Home() {
               </p>
               <CircuitBoard size={22} />
             </div>
-          </article>
+          </Link>
         </div>
       </section>
       <section id="about" className="about section">
@@ -508,10 +511,10 @@ export default function Home() {
           </div>
           <div>
             <h4>Projects</h4>
-            <a href="https://lexglobalbd.live/">LexGlobal BD</a>
-            <a href="#projects">JerseyOS</a>
-            <a href="#projects">SunShot AI</a>
-            <a href="#lexwork">LexWork</a>
+            <Link href="/projects/lexglobal-bd/">LexGlobal BD</Link>
+            <Link href="/projects/jerseyos/">JerseyOS</Link>
+            <Link href="/projects/sunshot-ai/">SunShot AI</Link>
+            <Link href="/projects/lexwork/">LexWork</Link>
           </div>
           <div>
             <h4>Company</h4>

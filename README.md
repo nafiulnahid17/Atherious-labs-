@@ -21,7 +21,10 @@ npm run cf:deploy
 
 ## Content and interactions
 
-- Projects: LexGlobal BD, JerseyOS and SunShot AI.
+- Each homepage project card and footer project link opens a dedicated detail page: `/projects/lexglobal-bd/`, `/projects/jerseyos/`, `/projects/sunshot-ai/`, `/projects/lexwork/`.
+- Detail pages include overview, intended audience, capabilities, workflow and availability. Live LexGlobal BD has an external Visit CTA; projects without a published URL have a project-specific enquiry email CTA.
+- Project content is maintained in `app/data/projects.ts`; add `visitUrl` there when an upcoming project launches.
+- Project routes are statically generated with individual metadata/canonical URLs. Unknown project slugs return 404.
 - LexWork is an upcoming intelligent legal workspace.
 - Founder: Nahid Alom, Founder & Director.
 - Board and team profiles remain explicitly unannounced; no fictional identities are presented as members.
