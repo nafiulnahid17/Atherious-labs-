@@ -153,21 +153,24 @@ function PendingProfiles({ team = false }: { team?: boolean }) {
       ];
   return (
     <div className="people-grid">
-      {roles.map((role, index) => (
-        <article className="person-card" key={role}>
-          <img
-            className="profile-art"
-            src={`/assets/${team ? "team" : "board"}-${index + 1}.webp`}
-            alt=""
-            loading="lazy"
-          />
-          <div className="person-copy">
-            <h3>To be announced</h3>
-            <p>{team ? "Team profile" : "Board & advisory profile"}</p>
-            <small>{role}</small>
-          </div>
-        </article>
-      ))}
+      {roles.map((role, index) => {
+        const isRaihan = !team && index === 0;
+        return (
+          <article className="person-card" key={isRaihan ? "raihan-naim" : role}>
+            <img
+              className="profile-art"
+              src={isRaihan ? "/assets/raihan-naim.jpg" : `/assets/${team ? "team" : "board"}-${index + 1}.webp`}
+              alt={isRaihan ? "Raihan Naim, Board Member and Deputy Director" : ""}
+              loading="lazy"
+            />
+            <div className="person-copy">
+              <h3>{isRaihan ? "Raihan Naim" : "To be announced"}</h3>
+              <p>{isRaihan ? "Board Member" : team ? "Team profile" : "Board & advisory profile"}</p>
+              <small>{isRaihan ? "Deputy Director" : role}</small>
+            </div>
+          </article>
+        );
+      })}
     </div>
   );
 }
@@ -403,7 +406,7 @@ export default function Home() {
             href="#board-profiles"
           />
           <p className="profile-note">
-            Illustrative portraits · Profiles to be announced
+            Board member profile · Additional appointments to be announced
           </p>
           <div id="board-profiles">
             <PendingProfiles />
