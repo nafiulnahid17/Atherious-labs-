@@ -62,6 +62,12 @@ const lexglobalPress = [
     href: "https://bijoy.tv/national/%E0%A6%A1%E0%A6%BF%E0%A6%9C%E0%A6%BF%E0%A6%9F%E0%A6%BE%E0%A6%B2-%E0%A6%9D%E0%A6%BE%E0%A6%AE%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4-%E0%A6%86%E0%A6%87%E0%A6%A8%E0%A6%BF",
   },
 ];
+const founderFeature = {
+  outlet: "NTV Online",
+  published: "16 September 2026",
+  headline: "প্রযুক্তির মাধ্যমে সহজে আইনসেবা দিতে লেক্সগ্লোবাল বিডির যাত্রা",
+  href: "https://www.ntvbd.com/bangladesh/news-1804477",
+};
 const allProjects = [
   {
     name: "Lex AI",
@@ -240,6 +246,7 @@ function PendingProfiles({ team = false }: { team?: boolean }) {
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [articleOpen, setArticleOpen] = useState(false);
   const [contactNote, setContactNote] = useState("");
   const [subscribeNote, setSubscribeNote] = useState("");
   function contact(e: FormEvent<HTMLFormElement>) {
@@ -343,27 +350,47 @@ export default function Home() {
             href="/projects/lexglobal-bd/"
           />
           <div className="product-grid flagship-grid" id="project-cards">
-            {products.map((product) => (
-              <a
-                className={`product-card ${product.className}`}
-                key={product.name}
-                href={product.href}
-                aria-label={`View ${product.name} project details`}
-              >
-                <img src={`/assets/${product.image}`} alt="" loading="lazy" />
-                <div className="product-shade" />
-                <span className="status">{product.tag}</span>
-                <div className="product-copy">
-                  <h3>{product.name}</h3>
-                  <h4>{product.subtitle}</h4>
-                  <p>{product.description}</p>
-                  <span className="text-link">
-                    View Project Details
-                    <ArrowRight size={16} />
-                  </span>
+            <div className="flagship-left-rail">
+              {products.map((product) => (
+                <a
+                  className={`product-card ${product.className}`}
+                  key={product.name}
+                  href={product.href}
+                  aria-label={`View ${product.name} project details`}
+                >
+                  <img src={`/assets/${product.image}`} alt="" loading="lazy" />
+                  <div className="product-shade" />
+                  <span className="status">{product.tag}</span>
+                  <div className="product-copy">
+                    <h3>{product.name}</h3>
+                    <h4>{product.subtitle}</h4>
+                    <p>{product.description}</p>
+                    <span className="text-link">
+                      View Project Details
+                      <ArrowRight size={16} />
+                    </span>
+                  </div>
+                </a>
+              ))}
+              <article className="founder-spotlight" aria-labelledby="founder-spotlight-title">
+                <div className="founder-spotlight-main">
+                  <img src="/assets/nahid-alom.png" alt="Md. Nahid Alam" />
+                  <div>
+                    <span className="founder-mini-kicker">Founder &amp; developer</span>
+                    <h3 id="founder-spotlight-title">Md. Nahid Alam</h3>
+                    <p>Founded and developed LexGlobal BD to make trusted legal guidance easier to access.</p>
+                  </div>
                 </div>
-              </a>
-            ))}
+                <div className="founder-mini-details" aria-label="Founder details">
+                  <span>LexGlobal BD founder</span>
+                  <span>Atherious Labs</span>
+                </div>
+                <button className="founder-article-trigger" type="button" onClick={() => setArticleOpen(true)}>
+                  Read full article
+                  <ArrowRight size={15} />
+                </button>
+              </article>
+            </div>
             <aside className="flagship-spotlight" aria-labelledby="lexglobal-spotlight-title">
               <div className="spotlight-intro">
                 <span className="spotlight-eyebrow">The LexGlobal BD platform</span>
@@ -696,6 +723,41 @@ export default function Home() {
           <span>Built from Bangladesh for a brighter tomorrow.</span>
         </div>
       </footer>
+      {articleOpen && (
+        <div
+          className="article-modal-backdrop"
+          role="presentation"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) setArticleOpen(false);
+          }}
+        >
+          <article className="article-modal" role="dialog" aria-modal="true" aria-labelledby="article-modal-title">
+            <button className="article-modal-close" type="button" onClick={() => setArticleOpen(false)} aria-label="Close article overview">
+              <X size={18} />
+            </button>
+            <div className="article-modal-portrait">
+              <img src="/assets/nahid-alom.png" alt="Md. Nahid Alam" />
+            </div>
+            <div className="article-modal-copy">
+              <span className="article-source">{founderFeature.outlet} · {founderFeature.published}</span>
+              <h2 id="article-modal-title">{founderFeature.headline}</h2>
+              <p>
+                NTV&apos;s feature presents LexGlobal BD as a technology-led legal-service platform designed to help people understand legal matters, find relevant information and reach appropriate professional support.
+              </p>
+              <p>
+                The report identifies Md. Nahid Alam as the platform&apos;s founder and describes its aim of making legal guidance clearer and more accessible, while keeping lawyers central to the process.
+              </p>
+              <div className="article-modal-actions">
+                <a href={founderFeature.href} target="_blank" rel="noreferrer" className="gold-button">
+                  Open original NTV article
+                  <ExternalLink size={16} />
+                </a>
+                <span>Article text remains on the publisher&apos;s site.</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      )}
     </main>
   );
 }
