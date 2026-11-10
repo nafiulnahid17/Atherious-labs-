@@ -5,6 +5,7 @@ import {
   Atom,
   BriefcaseBusiness,
   CircuitBoard,
+  ExternalLink,
   Github,
   Globe2,
   Linkedin,
@@ -27,6 +28,38 @@ const products = [
     description:
       "Making legal information, services and justice more accessible through AI.",
     href: "/projects/lexglobal-bd/",
+  },
+];
+const lexglobalPress = [
+  {
+    outlet: "NTV",
+    headline: "প্রযুক্তির মাধ্যমে সহজে আইনসেবা দিতে লেক্সগ্লোবাল বিডির যাত্রা",
+    logo: "press/ntv.png",
+    href: "https://www.ntvbd.com/bangladesh/news-1804477",
+  },
+  {
+    outlet: "The Daily Campus",
+    headline: "কৃত্রিম বুদ্ধিমত্তার প্রয়োগে আইনি সেবা সহজীকরণের তরুনদের উদ্যোগ",
+    logo: "press/the-daily-campus.svg",
+    href: "https://thedailycampus.com/innovation-research/274199",
+  },
+  {
+    outlet: "Khoborer Kagoj",
+    headline: "প্রযুক্তির ছোঁয়ায় আইনিসেবা এবার হাতের মুঠোয়",
+    logo: "press/khoborer-kagoj.png",
+    href: "https://www.khaborerkagoj.com/technologies-of-today/915049",
+  },
+  {
+    outlet: "Somoyer Konthosor",
+    headline: "দেশে প্রথমবার আইন বিষয়ক পূর্নাঙ্গ ডিজিটাল প্ল্যাটফর্ম নির্মাণ",
+    logo: "press/somoyer-konthosor.webp",
+    href: "https://somoyerkonthosor.com/post/2026/04/04/69d0bd1ac9f69",
+  },
+  {
+    outlet: "Bijoy TV",
+    headline: "ডিজিটাল ঝামেলামুক্ত আইনি সেবা নিয়ে ১৫ আগস্ট আসছে লেক্সগ্লোবাল বিডি",
+    logo: "press/bijoy-tv.gif",
+    href: "https://bijoy.tv/national/%E0%A6%A1%E0%A6%BF%E0%A6%9C%E0%A6%BF%E0%A6%9F%E0%A6%BE%E0%A6%B2-%E0%A6%9D%E0%A6%BE%E0%A6%AE%E0%A7%87%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4-%E0%A6%86%E0%A6%87%E0%A6%A8%E0%A6%BF",
   },
 ];
 const allProjects = [
@@ -331,6 +364,57 @@ export default function Home() {
                 </div>
               </a>
             ))}
+            <aside className="flagship-spotlight" aria-labelledby="lexglobal-spotlight-title">
+              <div className="spotlight-intro">
+                <span className="spotlight-eyebrow">The LexGlobal BD platform</span>
+                <h3 id="lexglobal-spotlight-title">Legal clarity, closer to everyone.</h3>
+                <p>
+                  A practical AI-powered legal ecosystem built to make legal information,
+                  research and professional support easier to reach in Bangladesh.
+                </p>
+                <div className="spotlight-signals" aria-label="LexGlobal BD features">
+                  <span>AI legal assistance</span>
+                  <span>Legal discovery</span>
+                  <span>Professional support</span>
+                </div>
+                <a
+                  className="gold-button spotlight-cta"
+                  href="https://lexglobalbd.live/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit LexGlobal BD
+                  <ExternalLink size={16} />
+                </a>
+              </div>
+              <div className="press-coverage">
+                <div className="press-heading">
+                  <span>Featured in</span>
+                  <p>Tap a publication to read its original coverage.</p>
+                </div>
+                <div className="press-grid">
+                  {lexglobalPress.map((feature) => (
+                    <a
+                      className="press-card"
+                      href={feature.href}
+                      key={feature.outlet}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Read ${feature.outlet}'s coverage of LexGlobal BD`}
+                    >
+                      <span className="press-logo">
+                        <img src={`/assets/${feature.logo}`} alt={`${feature.outlet} logo`} loading="lazy" />
+                      </span>
+                      <span className="press-copy">
+                        <strong>{feature.outlet}</strong>
+                        <small>{feature.headline}</small>
+                      </span>
+                      <ExternalLink className="press-external" size={14} aria-hidden="true" />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </aside>
           </div>
         </div>
       </section>

@@ -39,4 +39,5 @@ All generated images requested premium realistic cinematic artwork with no text,
 - `public/assets/lexwork-card-3d.png`: 4:3 3D legal-workspace visual with documents, workflow panels and scales; no embedded text.
 - `public/assets/cyberx-card-3d.png`: 4:3 3D cybersecurity shield with an abstract X energy core; no embedded text.
 - `public/assets/frame-forge-card-3d.png`: 4:3 3D video-generator visual with a film frame, play symbol and forged-motion particles; no embedded text.
+- `public/assets/press/*`: unmodified publisher logo files from the publishers' own sites, used in the LexGlobal BD press spotlight and linked to each outlet's original article.
 - Founder LinkedIn: https://www.linkedin.com/in/nafiul-al-nahid — profile name and LexGlobal BD activity matched. Facebook page URL has not been verified; no guessed link is published.
