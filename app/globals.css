@@ -343,6 +343,7 @@ h2 {
   margin: 0 0 20px;
 }
 .flagship-grid .product-card {
+  align-self: start;
   aspect-ratio: 4 / 3;
   min-height: 0;
 }
