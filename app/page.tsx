@@ -28,26 +28,6 @@ const products = [
       "Making legal information, services and justice more accessible through AI.",
     href: "/projects/lexglobal-bd/",
   },
-  {
-    name: "JerseyOS",
-    tag: "In development",
-    className: "production",
-    image: "production.webp",
-    subtitle: "Intelligent Production Operating System",
-    description:
-      "An AI-driven operating system for modern production and manufacturing.",
-    href: "/projects/jerseyos/",
-  },
-  {
-    name: "SunShot AI",
-    tag: "Upcoming",
-    className: "sunshot",
-    image: "sunshot.webp",
-    subtitle: "General-Purpose AI Platform",
-    description:
-      "A next-generation AI platform for individuals, businesses and beyond.",
-    href: "/projects/sunshot-ai/",
-  },
 ];
 const capabilities = [
   {
@@ -274,12 +254,12 @@ export default function Home() {
         <div className="container">
           <SectionHead
             kicker="Our work"
-            title="Highlighted Projects"
-            description="From legal intelligence to production systems and foundational AI — Atherious Labs builds and scales specialized products for real-world impact."
-            link="View All Projects"
-            href="#project-cards"
+            title="Flagship Projects"
+            description="LexGlobal BD is our flagship AI-powered legal ecosystem, making legal information, services and justice more accessible."
+            link="Explore LexGlobal BD"
+            href="/projects/lexglobal-bd/"
           />
-          <div className="product-grid" id="project-cards">
+          <div className="product-grid flagship-grid" id="project-cards">
             {products.map((product) => (
               <a
                 className={`product-card ${product.className}`}
