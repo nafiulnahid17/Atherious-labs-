@@ -256,7 +256,7 @@ h2 {
 }
 .flagship-grid {
   grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
-  align-items: stretch;
+  align-items: start;
   gap: 28px;
 }
 .product-card {
