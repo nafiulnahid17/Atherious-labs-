@@ -22,7 +22,7 @@ const products = [
     name: "LexGlobal BD",
     tag: "Live",
     className: "legal",
-    image: "legal.webp",
+    image: "lexglobal-card-3d.png",
     subtitle: "AI-Powered Legal Ecosystem",
     description:
       "Making legal information, services and justice more accessible through AI.",
