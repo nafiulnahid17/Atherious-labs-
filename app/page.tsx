@@ -374,10 +374,10 @@ export default function Home() {
               ))}
               <article className="founder-spotlight" aria-labelledby="founder-spotlight-title">
                 <div className="founder-spotlight-main">
-                  <img src="/assets/nahid-alom.png" alt="Md. Nahid Alam" />
+                  <img src="/assets/nahid-alom.png" alt="MD. NAHID" />
                   <div>
                     <span className="founder-mini-kicker">Founder &amp; developer</span>
-                    <h3 id="founder-spotlight-title">Md. Nahid Alam</h3>
+                    <h3 id="founder-spotlight-title">MD. NAHID</h3>
                     <p>Founded and developed LexGlobal BD to make trusted legal guidance easier to access.</p>
                   </div>
                 </div>
@@ -736,7 +736,7 @@ export default function Home() {
               <X size={18} />
             </button>
             <div className="article-modal-portrait">
-              <img src="/assets/nahid-alom.png" alt="Md. Nahid Alam" />
+              <img src="/assets/nahid-alom.png" alt="MD. NAHID" />
             </div>
             <div className="article-modal-copy">
               <span className="article-source">{founderFeature.outlet} · {founderFeature.published}</span>
@@ -745,7 +745,7 @@ export default function Home() {
                 NTV&apos;s feature presents LexGlobal BD as a technology-led legal-service platform designed to help people understand legal matters, find relevant information and reach appropriate professional support.
               </p>
               <p>
-                The report identifies Md. Nahid Alam as the platform&apos;s founder and describes its aim of making legal guidance clearer and more accessible, while keeping lawyers central to the process.
+                The report identifies the platform&apos;s founder and describes its aim of making legal guidance clearer and more accessible, while keeping lawyers central to the process.
               </p>
               <div className="article-modal-actions">
                 <a href={founderFeature.href} target="_blank" rel="noreferrer" className="gold-button">
