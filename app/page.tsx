@@ -225,6 +225,7 @@ export default function Home() {
               ["Cloud", "infrastructure"],
               ["Team", "team"],
               ["About", "about"],
+              ["Consult", "contact"],
             ].map(([label, id]) => (
               <a key={id} href={`#${id}`} onClick={() => setMenuOpen(false)}>
                 {label}
@@ -232,7 +233,7 @@ export default function Home() {
             ))}
           </nav>
           <a className="outline-button header-cta" href="#contact">
-            Consult
+            Contact Us
             <ArrowRight size={14} />
           </a>
         </header>
