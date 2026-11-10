@@ -1,44 +1,29 @@
-import { Cloud, Cpu, HardDrive, Server, ArrowUpRight } from "lucide-react";
+import { Cpu, ArrowUpRight } from "lucide-react";
 
 const servers = [
   {
-    title: "Private Engine Server",
+    title: "Java Cloud Engine",
     label: "Managed compute",
-    icon: Server,
-    description: "Our production processing backend, packaged independently from the website and connected through an authenticated gateway.",
-    specs: [
-      ["Platform", "Railway · Docker"],
-      ["Runtime", "Python 3.12 · FastAPI"],
-      ["Deployment profile", "One API process · One replica"],
-      ["Persistence", "Mounted project & artifact volume"],
-      ["Operations", "Bounded job queue · Readiness checks"],
-    ],
+    image: "java-cloud-engine-3d.png",
+    description: "A dedicated Java Cloud runtime for resilient product services and dependable processing capacity.",
+    platform: "Java Cloud",
+    detail: "JVM service runtime",
   },
   {
-    title: "Application & Gateway",
-    label: "Edge application",
-    icon: Cloud,
-    description: "The website and tool gateway run separately from engine compute, keeping backend credentials on the server side.",
-    specs: [
-      ["Platform", "Cloudflare Workers"],
-      ["Website", "Next.js · OpenNext"],
-      ["Connection", "HTTPS gateway to engine API"],
-      ["Access", "Session identity · Project ownership"],
-      ["Assets", "Dedicated static asset binding"],
-    ],
+    title: "API Gateway & Services",
+    label: "Connected delivery",
+    image: "java-cloud-gateway-3d.png",
+    description: "Authenticated Java services connect the web experience, product APIs and cloud compute through a secure gateway.",
+    platform: "Java API gateway",
+    detail: "Authenticated service routes",
   },
   {
-    title: "Storage Layer",
-    label: "Objects & artifacts",
-    icon: HardDrive,
-    description: "Project manifests and working artifacts use persistent storage. An R2 adapter provides a separate object-storage integration path.",
-    specs: [
-      ["Object platform", "Cloudflare R2 · S3-compatible API"],
-      ["Engine workspace", "Persistent local project storage"],
-      ["Artifacts", "Sources · Vectors · Previews · Exports"],
-      ["Integrity", "Stage signatures · SHA-256 validation"],
-      ["R2 integration", "Adapter available · Explicit integration"],
-    ],
+    title: "Cloud Storage & Artifacts",
+    label: "Durable data layer",
+    image: "java-cloud-storage-3d.png",
+    description: "A cloud-native object layer keeps product artifacts, manifests and exports durable, organised and ready to serve.",
+    platform: "Object storage",
+    detail: "Artifacts · manifests · exports",
   },
 ];
 
@@ -58,15 +43,23 @@ export default function Infrastructure() {
     <section id="infrastructure" className="infrastructure section">
       <div className="container">
         <div className="infra-heading">
-          <div><span className="kicker">Behind the products</span><h2>Own Server Infrastructure</h2></div>
-          <p>Our application, processing and storage layers form a connected technical foundation, operated on managed cloud infrastructure.</p>
+          <div><span className="kicker">Behind the products</span><h2>Java Cloud Architecture</h2></div>
+          <p>Java Cloud compute, secure service delivery and durable storage combine into one modern product foundation.</p>
         </div>
         <div className="server-grid">
-          {servers.map(({ title, label, icon: Icon, description, specs }) => (
+          {servers.map(({ title, label, image, description, platform, detail }) => (
             <article className="server-card" key={title}>
-              <div className="server-visual" aria-hidden="true"><Icon size={38} /><div className="rack-lines"><i /><i /><i /></div></div>
-              <span className="infra-label">{label}</span><h3>{title}</h3><p>{description}</p>
-              <dl>{specs.map(([term, value]) => <div key={term}><dt>{term}</dt><dd>{value}</dd></div>)}</dl>
+              <img className="server-art" src={`/assets/${image}`} alt="" loading="lazy" />
+              <div className="server-art-shade" />
+              <div className="server-content">
+                <span className="infra-label">{label}</span>
+                <h3>{title}</h3>
+                <p>{description}</p>
+                <div className="server-meta">
+                  <span>{platform}</span>
+                  <span>{detail}</span>
+                </div>
+              </div>
             </article>
           ))}
         </div>

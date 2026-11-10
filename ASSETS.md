@@ -39,5 +39,8 @@ All generated images requested premium realistic cinematic artwork with no text,
 - `public/assets/lexwork-card-3d.png`: 4:3 3D legal-workspace visual with documents, workflow panels and scales; no embedded text.
 - `public/assets/cyberx-card-3d.png`: 4:3 3D cybersecurity shield with an abstract X energy core; no embedded text.
 - `public/assets/frame-forge-card-3d.png`: 4:3 3D video-generator visual with a film frame, play symbol and forged-motion particles; no embedded text.
+- `public/assets/java-cloud-engine-3d.png`: 4:3 Java Cloud compute illustration with a cobalt server, cloud data arcs and amber core; no embedded text.
+- `public/assets/java-cloud-gateway-3d.png`: 4:3 Java Cloud service-gateway illustration with connected cloud endpoints; no embedded text.
+- `public/assets/java-cloud-storage-3d.png`: 4:3 distributed cloud-storage and artifact-vault illustration; no embedded text.
 - `public/assets/press/*`: unmodified publisher logo files from the publishers' own sites, used in the LexGlobal BD press spotlight and linked to each outlet's original article.
 - Founder LinkedIn: https://www.linkedin.com/in/nafiul-al-nahid — profile name and LexGlobal BD activity matched. Facebook page URL has not been verified; no guessed link is published.

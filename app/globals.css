@@ -1568,6 +1568,17 @@ footer {
 .server-card dl > div:last-child, .engine-card dl > div:last-child { padding-bottom: 0; }
 .server-card dt, .engine-card dt { font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: #7f9bb0; margin-bottom: 6px; }
 .server-card dd, .engine-card dd { margin: 0; font-size: 12px; line-height: 1.7; color: #d2dce4; overflow-wrap: anywhere; }
+.server-card { aspect-ratio: 4 / 3; min-height: 0; padding: 0; overflow: hidden; isolation: isolate; transition: transform .25s ease, border-color .25s ease; }
+.server-card:hover { border-color: #e5b969a8; transform: translateY(-5px); }
+.server-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform .5s ease; }
+.server-card:hover .server-art { transform: scale(1.045); }
+.server-art-shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(2, 10, 17, .05) 10%, rgba(3, 11, 18, .24) 39%, rgba(2, 8, 13, .95) 100%); }
+.server-content { position: absolute; right: 0; bottom: 0; left: 0; padding: 25px 25px 21px; }
+.server-card .infra-label { color: #f1c46d; }
+.server-card h3 { max-width: 300px; margin: 8px 0 8px; color: #f5f7f8; font-size: clamp(21px, 1.8vw, 27px); line-height: 1.08; letter-spacing: -.7px; }
+.server-card p { max-width: 380px; margin: 0 0 15px; color: #c5d3d9; font-size: 12px; line-height: 1.5; }
+.server-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; border-top: 1px solid rgba(179, 209, 220, .24); padding-top: 10px; color: #a8c9d7; font-size: 9px; font-weight: 700; letter-spacing: .7px; text-transform: uppercase; }
+.server-meta span:last-child { overflow: hidden; text-align: right; text-overflow: ellipsis; white-space: nowrap; }
 .engines-heading { margin-top: 80px; scroll-margin-top: 30px; }
 .engine-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .engine-card { padding: 24px; background: linear-gradient(150deg, #15212f, #070f17); }
@@ -1576,5 +1587,5 @@ footer {
 .engine-top span { font-size: 13px; letter-spacing: 3px; color: #ba9f6b; }
 .infra-contact { margin-top: 35px; }
 @media (max-width: 1200px) { .engine-grid { grid-template-columns: repeat(2, 1fr); } .navigation { gap: 16px; } }
-@media (max-width: 1000px) { .server-grid { grid-template-columns: 1fr; } .server-card { display: grid; grid-template-columns: 1fr 1fr; column-gap: 35px; } .server-card .server-visual, .server-card .infra-label, .server-card h3, .server-card p { grid-column: 1; } .server-card dl { grid-column: 2; grid-row: 1 / 5; align-self: center; } }
-@media (max-width: 760px) { .infra-heading { grid-template-columns: 1fr; gap: 15px; } .server-card { display: block; padding: 25px; } .engine-grid { grid-template-columns: 1fr; } .engines-heading { margin-top: 60px; } }
+@media (max-width: 1000px) { .server-grid { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .infra-heading { grid-template-columns: 1fr; gap: 15px; } .server-card { aspect-ratio: 4 / 3; } .server-content { padding: 20px; } .server-card p { margin-bottom: 12px; } .engine-grid { grid-template-columns: 1fr; } .engines-heading { margin-top: 60px; } }
