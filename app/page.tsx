@@ -29,6 +29,56 @@ const products = [
     href: "/projects/lexglobal-bd/",
   },
 ];
+const allProjects = [
+  {
+    name: "Lex AI",
+    subtitle: "The Law Voice Assistant",
+    tag: "Upcoming",
+    statusClass: "is-upcoming",
+    image: "lex-ai-card-3d.png",
+    href: "#contact",
+  },
+  {
+    name: "Jersey OS",
+    subtitle: "Intelligent Production System",
+    tag: "Upcoming",
+    statusClass: "is-upcoming",
+    image: "jersey-os-card-3d.png",
+    href: "/projects/jerseyos/",
+  },
+  {
+    name: "SunShot AI",
+    subtitle: "General-Purpose AI Platform",
+    tag: "Launching Dec 05",
+    statusClass: "is-launching",
+    image: "sunshot-ai-card-3d.png",
+    href: "/projects/sunshot-ai/",
+  },
+  {
+    name: "LexWork",
+    subtitle: "Intelligent Legal Workspace",
+    tag: "Upcoming",
+    statusClass: "is-upcoming",
+    image: "lexwork-card-3d.png",
+    href: "/projects/lexwork/",
+  },
+  {
+    name: "CyberX",
+    subtitle: "Cybersecurity Platform",
+    tag: "Upcoming",
+    statusClass: "is-upcoming",
+    image: "cyberx-card-3d.png",
+    href: "#contact",
+  },
+  {
+    name: "Frame Forge",
+    subtitle: "Video Generator",
+    tag: "Live",
+    statusClass: "is-live",
+    image: "frame-forge-card-3d.png",
+    href: "#contact",
+  },
+];
 const capabilities = [
   {
     icon: Atom,
@@ -282,29 +332,47 @@ export default function Home() {
               </a>
             ))}
           </div>
-          <a className="lexwork" id="lexwork" href="/projects/lexwork/" aria-label="View LexWork project details">
-            <img src="/assets/lexwork.webp" alt="" loading="lazy" />
-            <div className="lexwork-copy">
-              <span className="kicker">Next from Atherious Labs · Upcoming</span>
-              <h3>LexWork</h3>
-              <p>
-                An upcoming intelligent legal workspace, bringing research,
-                documents and everyday legal work into one considered experience.
-              </p>
-              <span className="text-link">
-                View Project Details
-                <ArrowRight size={16} />
-              </span>
+        </div>
+      </section>
+      <section id="all-projects" className="all-projects section">
+        <div className="container">
+          <SectionHead
+            kicker="The portfolio"
+            title="All Projects"
+            description="Explore the upcoming and live products shaping the Atherious Labs ecosystem."
+            link="Show All"
+            href="#all-projects-list"
+          />
+          <div className="all-projects-viewport" id="all-projects-list">
+            <div className="all-projects-track">
+              {[...allProjects, ...allProjects].map((project, index) => {
+                const isDuplicate = index >= allProjects.length;
+
+                return (
+                  <a
+                    className={`all-project-card ${project.statusClass}`}
+                    key={`${project.name}-${index}`}
+                    href={project.href}
+                    aria-label={`View ${project.name} project details`}
+                    aria-hidden={isDuplicate || undefined}
+                    tabIndex={isDuplicate ? -1 : undefined}
+                  >
+                    <img src={`/assets/${project.image}`} alt="" loading="lazy" />
+                    <div className="all-project-shade" />
+                    <span className="status">{project.tag}</span>
+                    <div className="all-project-copy">
+                      <h3>{project.name}</h3>
+                      <p>{project.subtitle}</p>
+                      <span className="text-link">
+                        View Project
+                        <ArrowRight size={15} />
+                      </span>
+                    </div>
+                  </a>
+                );
+              })}
             </div>
-            <div className="lexwork-panel">
-              <span className="launch-label">Upcoming</span>
-              <h4>Legal work, thoughtfully connected.</h4>
-              <p>
-                Research · Documents · Workflow
-              </p>
-              <CircuitBoard size={22} />
-            </div>
-          </a>
+          </div>
         </div>
       </section>
       <Infrastructure />

@@ -32,4 +32,11 @@ All generated images requested premium realistic cinematic artwork with no text,
 - `public/assets/atherious-orbit-logo.png`: new supplied orbit logo, unchanged bytes. Displayed in header/footer and used as site icon. CSS frames the orbit mark alongside editable brand text.
 - `public/assets/nahid-alom.png`: supplied Nahid Alom portrait, unchanged bytes; displayed in the founder section.
 - `public/assets/lexwork.webp`: individually generated premium legal-workspace banner, optimized from the original PNG. Prompt: wide midnight navy office, glass document layers, subtle legal scales, gold desk light and cyan highlights, dark left area for HTML text, no people, readable text or logos.
+- `public/assets/lexglobal-card-3d.png`: supplied LexGlobal BD logo reimagined as a 4:3 navy, silver and gold 3D scales-of-justice card visual, with no embedded text.
+- `public/assets/lex-ai-card-3d.png`: 4:3 3D legal voice-assistant visual with balanced scales and luminous audio-wave forms; no embedded text.
+- `public/assets/jersey-os-card-3d.png`: 4:3 3D industrial automation visual with robotics and an illuminated operating-system core; no embedded text.
+- `public/assets/sunshot-ai-card-3d.png`: 4:3 3D solar-orbit visual for SunShot AI; no embedded text.
+- `public/assets/lexwork-card-3d.png`: 4:3 3D legal-workspace visual with documents, workflow panels and scales; no embedded text.
+- `public/assets/cyberx-card-3d.png`: 4:3 3D cybersecurity shield with an abstract X energy core; no embedded text.
+- `public/assets/frame-forge-card-3d.png`: 4:3 3D video-generator visual with a film frame, play symbol and forged-motion particles; no embedded text.
 - Founder LinkedIn: https://www.linkedin.com/in/nafiul-al-nahid — profile name and LexGlobal BD activity matched. Facebook page URL has not been verified; no guessed link is published.
